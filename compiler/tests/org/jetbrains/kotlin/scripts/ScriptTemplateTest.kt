@@ -265,7 +265,7 @@ class ScriptTemplateTest {
             Assert.fail("should throw compilation error")
         }
         catch (e: KotlinFrontEndException) {
-            if (!(e.message?.contains("Script definition not found") ?: false)) {
+            if (!(e.message?.contains("Should not parse a script without definition") ?: false)) {
                 // unexpected error
                 throw e
             }
